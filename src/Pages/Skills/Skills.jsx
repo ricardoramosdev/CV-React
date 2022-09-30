@@ -33,12 +33,36 @@ export const Skills = () => {
         setDisplayTech(e.icon)
         console.log(e)
     }
+    // Animacion en  cuanto se revele
+    const [show, setShow] = useState(false)
+    let skillCircle ;
+    window.addEventListener("load", (event) => {
+        skillCircle = document.getElementById('skills-circle');
+      
+        createObserver();
+      }, false);
+    const createObserver = ()=>{
+        let observer;
+        let options ={
+            threshold: 1.0
+          }
+        observer = new IntersectionObserver(handleItersect,options);
+        observer.observe(skillCircle)
+    }
+    const handleItersect = (entries)=>{
+        entries.forEach((entry)=>{
+            if(entry.isIntersecting){
+                setShow(true)
+
+            }
+        })
+    }
   return (
     <div className='skills-section' id='skills'>
             <div className='skills-title'><h2>Skills</h2></div>
 
         <div className="skills-container">
-            <div className="skill-circle">
+            <div className={show?'spin-out skill-circle':'skill-circle'} id='skills-circle' >
                 <div className="displayTech">{displayTech}</div>
                 {skillsArray.map(el=><div className='bubble' 
                 style={{transform: `translateX(${el.posX}px) translateY(${el.posY}px)`

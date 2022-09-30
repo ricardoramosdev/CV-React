@@ -8,6 +8,8 @@ import { Home } from "./Pages/Home/Home";
 import { AboutMe } from "./Pages/AboutMe/AboutMe";
 import { Sidemenu } from "./Sections/Sidemenu/Sidemenu";
 import { Skills } from "./Pages/Skills/Skills";
+import { FavoriteProjects } from "./Pages/Projects/FavoritesProjects/FavoriteProjects";
+import { AllProjects } from "./Pages/Projects/AllProjects/AllProjects";
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
           <Home/>
           <AboutMe/>
           <Skills/>
+          <AllProjects/>
         </Content>
         <Sidemenu/>
 
