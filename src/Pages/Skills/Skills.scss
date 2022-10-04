@@ -3,7 +3,8 @@
     z-index: 0;
     .skills-title{
         position: absolute;
-        top:60px
+        top:60px;
+        
     }
     background-color: var(--white-color);
     padding: 0 1rem;
@@ -11,6 +12,9 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    .skills-container{
+        padding-top: 4rem;
+    }
     .skill-circle{
         height: 200px;
         width: 200px;
@@ -41,7 +45,7 @@
             //     width: 100%;
             // }
             img{
-                transform: scale(0.7);
+                transform: scale(0.27);
                 filter: grayscale(1) contrast(200%);
             }
             
@@ -56,6 +60,7 @@
         
     }
     .displayTech{
+
         display: flex;
         align-items: center;
         justify-content: center;

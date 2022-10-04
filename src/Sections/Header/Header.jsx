@@ -1,4 +1,4 @@
-import { Button, Drawer, Menu } from 'antd';
+import { Button, Col, Drawer, Menu, Row } from 'antd';
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import { MenuOutlined} from '@ant-design/icons'
@@ -28,27 +28,32 @@ export const Header = () => {
     <div className="navbar">
         <div className="logo"><h1>RR</h1></div>
         
-      <Menu
-        className='menu'
-        mode="horizontal"
-        defaultSelectedKeys={['1']}
-        items={items}
+      <Row>
+        <Col xs={0} sm={0} md={24}>
+          <Menu
+            className='menu'
+            mode="horizontal"
+            defaultSelectedKeys={['1']}
+            items={items}
+          
+          />
+        </Col>
+        <Col className="burger-menu" md={0} >
+        <Button type="ghost" onClick={showDrawer} style={{height:'100%',border:'none'}}>
+            <MenuOutlined/>
+        </Button>
+        <Drawer title="RR" placement="right" onClose={onClose} open={open}>
+        <Menu
+          className='menu'
+          mode="vertical"
+          defaultSelectedKeys={['1']}
+          items={items}
         
-      />
-      <div className="burger-menu">
-      <Button type="ghost" onClick={showDrawer} style={{height:'100%',border:'none'}}>
-          <MenuOutlined/>  
-      </Button>
-      <Drawer title="RR" placement="right" onClose={onClose} open={open}>
-      <Menu
-        className='menu'
-        mode="vertical"
-        defaultSelectedKeys={['1']}
-        items={items}
-        
-      />
-      </Drawer>
-      </div>
+        />
+        </Drawer>
+      
+      </Col>
+      </Row>
     </div>
     </>
   )

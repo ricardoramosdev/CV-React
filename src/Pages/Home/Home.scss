@@ -18,18 +18,19 @@
         }
         .hero-img{
            display: flex;
-           
-           padding:3rem;
+           align-items: center;
+           justify-content: center;
            overflow: hidden;
            transition: ease-in;
            animation-name: fadeIn;
            animation-duration: 4s;
           video{
-            width: 300px;
-           height: 300px;
+            // width: 300px;
+        //    height: 300px;
            border-radius: 50%;
             width:100%;
             box-shadow: rgba(black,0.3)  0 1rem 0.5rem;
+            
           }
         }
     }

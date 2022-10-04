@@ -31,7 +31,6 @@ export const Skills = () => {
     const [displayTech, setDisplayTech] = useState('')
     const selectTech = (e)=>{
         setDisplayTech(e.icon)
-        console.log(e)
     }
     // Animacion en  cuanto se revele
     const [show, setShow] = useState(false)
