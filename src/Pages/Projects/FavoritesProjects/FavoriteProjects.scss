@@ -1,0 +1,115 @@
+[data-aos='reveal']{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--primary-color);
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        transform-origin: left;
+    }
+
+    
+    &.aos-animate{
+        &::before{
+            content:'';
+            top: 0;
+            right: 0;
+            background-color: var(--primary-color);
+
+            width: 0%;
+            height: 100%;
+            
+    
+        }
+      }
+    
+}
+.featured-projects{
+    text-align: center;
+    position: relative;
+    h2{
+        margin: 1rem;
+    }
+    .favorite-container:nth-child(even){
+        background-color: var(--white-color) !important ;
+        .tech-btn{
+            background-color: var(--secondary-color);
+        }
+        .project-display{
+            background-color: var(--tertiary-color);
+        }
+    }
+
+    .favorite-container{
+        padding-left: 6rem;
+        background-color: var(--secondary-color);
+        position:sticky;
+        top: 60px;
+        height: 120vh;
+        &:nth-child(4){
+            height:100vh;
+        }
+        .project-info{
+        padding-top: 60px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: end;
+            padding-right: 1rem;
+         
+          
+        }
+        .tech-btn{
+            background-color: var(--white-color);
+        }
+    }
+}
+.tech-btn{
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: #777 1px 1px 1px;
+    margin: 0.5rem;
+    padding: 3px;
+
+}
+.project-display{
+    background-color: var(--primary-color);
+    padding-top: 60px;
+    .ant-col{
+        display: flex;
+        justify-content: center;
+        .mobile-img,.desktop-img{
+            width: 100%;
+           padding: 1rem;
+        }
+        .mobile-img{
+           max-width: 200px;
+
+        }
+    }
+}
+.more-projects{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.ant-btn{
+    border-radius: 0.3rem;
+    &:hover{
+        color: var(--contrast-color);
+        border-color: var(--contrast-color);
+    }
+}
+@media (max-width:575px) {
+    .favorite-container{
+        padding-left: 0px !important;
+    }
+}
