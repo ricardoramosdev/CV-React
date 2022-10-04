@@ -14,6 +14,7 @@ import { Context } from "./Context/Context";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import { useEffect } from "react";
+import { CallToAction } from "./Pages/CallToAction/CallToAction";
 function App() {
  
  useEffect(()=>{
@@ -34,7 +35,7 @@ function App() {
           <AboutMe/>
           <Skills/>
           <FavoriteProjects />
-
+          <CallToAction/>
         </Content>
         <Sidemenu/>
 
