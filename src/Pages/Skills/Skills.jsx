@@ -28,7 +28,7 @@ export const Skills = () => {
         el.posX=calculatePosition(skillsArray.indexOf(el))[0];
         el.posY=calculatePosition(skillsArray.indexOf(el))[1];
     })
-    const [displayTech, setDisplayTech] = useState('')
+    const [displayTech, setDisplayTech] = useState(skillsArray[3].icon)
     const selectTech = (e)=>{
         setDisplayTech(e.icon)
     }
